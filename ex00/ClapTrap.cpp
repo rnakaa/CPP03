@@ -9,7 +9,13 @@ ClapTrap(std::string name){
 }
 
 void ClapTrap::attack(const std::string&target){
-	std::cout << "ClapTrap " <<   << "attacks "<target>, causing <damage> points of damage! 
+	std::cout << "ClapTrap " <<   << "attacks " << target << "causing "   << " 10 points of damage!"  << std::endl;
 }
-void ClapTrap::takeDamage(unsigned int amout);
-void ClapTrap::beRepaired(unsigned int amout);
+
+void ClapTrap::takeDamage(unsigned int amout){
+	std::cout << _name << " takes " << amount << "of dameges\n";
+	_hp -= amount;
+}
+void ClapTrap::beRepaired(unsigned int amout){
+	
+}
