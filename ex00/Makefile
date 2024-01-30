@@ -2,10 +2,11 @@ CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = Aaaaand... OPEN!
+NAME = "Aaaaand...OPEN!"
 
 SRCS = main.cpp \
-	   Fixed.cpp
+	   ClapTrap.cpp
+	   
 
 HEADER = Fixed.hpp
 

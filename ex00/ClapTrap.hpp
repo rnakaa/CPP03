@@ -1,15 +1,21 @@
+#ifndef CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 #include "ClapTrap.hpp"
+#include <iostream>
 
 class ClapTrap{
 	private:
 		std::string _name;
-		int _hp = 10;
-		int _enp = 10;
-		int _dmg = 0;
+		int _hp;
+		int _enp;
+		int _dmg;
 	public:
 		ClapTrap(std::string name);
+		ClapTrap(ClapTrap& cp);
+		ClapTrap &operator=(ClapTrap & cp);
 		~ClapTrap();
 		void attack(const std::string&target);
-		void takeDamage(unsigned int amout);
-		void beRepaired(unsigned int amout);
+		void takeDamage(unsigned int amount);
+		void beRepaired(unsigned int amount);
 };
+#endif
