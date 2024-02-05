@@ -7,12 +7,12 @@ NAME = "Repetitive work"
 SRCS = main.cpp \
 	   ClapTrap.cpp\
 	   ScavTrap.cpp \
-		FlagTrap.cpp
+		FragTrap.cpp
 	   
 
 HEADER = ClapTrap.hpp\
 		 ScavTrap.hpp\
-		 FlagTrap.hpp
+		 FragTrap.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 

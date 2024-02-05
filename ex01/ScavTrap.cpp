@@ -10,13 +10,13 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name){
 
 void ScavTrap::attack(std::string target){
 	if (_hp <= 0){
-		std::cout << "Hit points is empty" << std::endl;
+		std::cout << "Hit points are empty" << std::endl;
 		return ;
 	}
 	std::cout << "ScavTrap " << _name  << "attacks " << target << " causing"   << _dmg<< "points of damage!"  << std::endl;
 }
 
-ScavTrap &ScavTrap::operator=(ScavTrap & cp){
+ScavTrap &ScavTrap::operator=(const ScavTrap & cp){
 	if (this == &cp)
 		return *this;
 	_hp = cp._hp;
@@ -25,7 +25,7 @@ ScavTrap &ScavTrap::operator=(ScavTrap & cp){
 	return *this;
 }
 
-ScavTrap::ScavTrap(ScavTrap& cp){
+ScavTrap::ScavTrap(const ScavTrap& cp){
 	*this = cp;
 }
 
@@ -35,7 +35,7 @@ ScavTrap::~ScavTrap(){
 
 void ScavTrap::guardGate(){
 	if (_hp <= 0){
-		std::cout << "Hit points is empty" << std::endl;
+		std::cout << "Hit points are empty" << std::endl;
 		return ;
 	}
 	std::cout << _name << " is now gatekeeper!!!!"<< std::endl;

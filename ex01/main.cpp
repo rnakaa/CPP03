@@ -6,7 +6,8 @@ int main(){
 	ScavTrap c("temutemu");
 
 	c.attack("pomupomu");
+	c.takeDamage(100);
 	c.takeDamage(20);
 	c.beRepaired(10);
-	c.beRepaired(9);
+	c.takeDamage(20);
 }
