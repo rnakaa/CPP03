@@ -3,11 +3,24 @@
 #include "ScavTrap.hpp"
 
 int main(){
-	ScavTrap c("temutemu");
+	ClapTrap alis("alis");
+	ScavTrap bob("bob");
+	ScavTrap chary("bob");
 
-	c.attack("pomupomu");
-	c.takeDamage(100);
-	c.takeDamage(20);
-	c.beRepaired(10);
-	c.takeDamage(20);
+	bob.guardGate();
+	std::cout << "-------------------------------------" << std::endl;
+	alis.attack("chary");
+	bob.takeDamage(0);
+	std::cout << "-------------------------------------" << std::endl;
+	chary.attack("bob");
+	bob.takeDamage(20);
+	chary.attack("bob");
+	bob.takeDamage(20);
+	chary.attack("bob");
+	bob.takeDamage(20);
+	std::cout << "-------------------------------------" << std::endl;
+	for (int i = 0;i < 50; i++){
+		bob.beRepaired(10);
+	}
+	bob.beRepaired(10);
 }

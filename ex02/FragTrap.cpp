@@ -13,6 +13,11 @@ void FragTrap::attack(std::string target){
 		std::cout << "Hit points are empty" << std::endl;
 		return ;
 	}
+	if (_enp <= 0){
+		std::cout << "Energy points are empty" << std::endl;
+		return ;
+	}
+	_enp--;
 	std::cout << "FragTrap " << _name  << "attacks " << target << " causing"   << _dmg<< "points of damage!"  << std::endl;
 }
 

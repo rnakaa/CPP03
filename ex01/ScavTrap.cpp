@@ -13,7 +13,12 @@ void ScavTrap::attack(std::string target){
 		std::cout << "Hit points are empty" << std::endl;
 		return ;
 	}
-	std::cout << "ScavTrap " << _name  << "attacks " << target << " causing"   << _dmg<< "points of damage!"  << std::endl;
+	if (_enp <= 0){
+		std::cout << "Energy points are empty" << std::endl;
+		return ;
+	}
+	_enp--;
+	std::cout << "ScavTrap " << _name  << " attacks " << target << ", causing"   << _dmg<< "points of damage!"  << std::endl;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap & cp){
