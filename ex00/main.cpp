@@ -7,7 +7,6 @@ int main(){
 
 	std::cout << "\nnamunamu\nhp:10\nep:10\n\n";
 	a.attack("pomupomu");
-	b.takeDamage(1);
 	b.attack("namunamu");
 	b.beRepaired(5);
 	b.attack("namunamu");
@@ -18,5 +17,7 @@ int main(){
 	b.attack("namunamu");
 	b.attack("namunamu");
 	b.attack("namunamu");
+	b.attack("namunamu");
+	b.takeDamage(UINT_MAX);
 	b.attack("namunamu");
 }
