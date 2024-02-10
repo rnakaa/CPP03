@@ -4,11 +4,11 @@
 #include "FragTrap.hpp"
 
 int main(){
-	FragTrap c("temutemu");
+	FragTrap c("namunamu");
 
 	c.attack("pomupomu");
-	c.takeDamage(100);
-	c.takeDamage(100);
+	c.highFivesGuys();
+	c.takeDamage(90);
 	c.beRepaired(10);
 	c.takeDamage(100);
 	c.beRepaired(100);

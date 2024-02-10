@@ -1,6 +1,13 @@
 #include "ClapTrap.hpp"
 #include "FragTrap.hpp"
 
+FragTrap::FragTrap() : ClapTrap(){
+	std::cout << "Frag Constractor\n";
+	_hp = 100;
+	_enp = 100;
+	_dmg = 30;
+}
+
 FragTrap::FragTrap(std::string name) : ClapTrap(name){
 	std::cout << "Frag Constractor\n";
 	_hp = 100;
@@ -18,6 +25,8 @@ void FragTrap::attack(std::string target){
 		return ;
 	}
 	_enp--;
+	if (_enp < 0)
+		_enp = 0;
 	std::cout << "FragTrap " << _name  << "attacks " << target << " causing"   << _dmg<< "points of damage!"  << std::endl;
 }
 
