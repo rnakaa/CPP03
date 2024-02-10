@@ -70,8 +70,8 @@ void ClapTrap::beRepaired(unsigned int amount){
 		return ;
 	}
 	std::cout << _name << " repaired " << amount << " of hp" << std::endl;
-	if (UINT_MAX - _hp <= amount)
-		_hp = UINT_MAX;
+	if (static_cast<unsigned int>(INT_MAX - _hp) <= amount)
+		_hp = INT_MAX;
 	else
 		_hp += amount;
 	_enp--;

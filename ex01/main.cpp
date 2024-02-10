@@ -4,7 +4,7 @@
 
 int main(){
 	ClapTrap alis("alis");
-	ScavTrap bob("bob");
+	ScavTrap bob();
 	ScavTrap chary("bob");
 
 	bob.guardGate();

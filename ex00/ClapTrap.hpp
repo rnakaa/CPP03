@@ -10,6 +10,7 @@ class ClapTrap{
 		int _enp;
 		int _dmg;
 	public:
+		ClapTrap();
 		ClapTrap(std::string name);
 		ClapTrap(const ClapTrap& cp);
 		ClapTrap &operator=(const ClapTrap & cp);

@@ -1,5 +1,13 @@
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap(){
+	std::cout << "Clap Constractor\n";
+	_name = "default";
+	_hp = 10;
+	_enp = 10;
+	_dmg = 0;
+}
+
 ClapTrap::ClapTrap(std::string name){
 	std::cout << "Constractor\n";
 	_hp = 10;
@@ -62,8 +70,8 @@ void ClapTrap::beRepaired(unsigned int amount){
 		return ;
 	}
 	std::cout << _name << " repaired " << amount << " of hp" << std::endl;
-	if (UINT_MAX - _hp <= amount)
-		_hp = UINT_MAX;
+	if (static_cast<unsigned int>(INT_MAX - _hp) <= amount)
+		_hp = INT_MAX;
 	else
 		_hp += amount;
 	_enp--;

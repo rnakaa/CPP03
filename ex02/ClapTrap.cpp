@@ -53,9 +53,10 @@ void ClapTrap::takeDamage(unsigned int amount){
 		return ;
 	}
 	std::cout << _name << " takes " << amount << " of dameges" << std::endl;
-	_hp -= amount;
-	if (_hp < 0)
+	if (static_cast<unsigned int>(_hp) < amount)
 		_hp = 0;
+	else
+		_hp -= amount;
 }
 
 void ClapTrap::beRepaired(unsigned int amount){
@@ -68,7 +69,10 @@ void ClapTrap::beRepaired(unsigned int amount){
 		return ;
 	}
 	std::cout << _name << " repaired " << amount << " of hp" << std::endl;
-	_hp += amount;
+	if (INT_MAX - _hp <= amount)
+		_hp = INT_MAX;
+	else
+		_hp += amount;
 	--_enp;
 	if (_enp < 0)
 		_enp = 0;

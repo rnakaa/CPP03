@@ -1,6 +1,14 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
+ScavTrap::ScavTrap() : ClapTrap(){
+	std::cout << "Scav Constractor\n";
+	_hp = 100;
+	_enp = 50;
+	_dmg = 20;
+}
+
+
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name){
 	std::cout << "Scav Constractor\n";
 	_hp = 100;
@@ -18,6 +26,8 @@ void ScavTrap::attack(std::string target){
 		return ;
 	}
 	_enp--;
+	if (_enp < 0)
+		_enp = 0;
 	std::cout << "ScavTrap " << _name  << " attacks " << target << ", causing"   << _dmg<< "points of damage!"  << std::endl;
 }
 
